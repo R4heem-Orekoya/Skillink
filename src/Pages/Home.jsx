@@ -16,28 +16,28 @@ const Home = () => {
          ⏱️ Save time searching! Find the best developer resources - curated blog posts, informative YouTube videos & clear roadmaps.
          </p>
          <div className="flex gap-4 justify-center items-center flex-wrap max-sm:max-w-xs max-sm:px-6 mx-auto">
-            <Link to='/yt-videos' className={buttonVariants({size: 'lg', className: "flex-1"})}>Browse YouTube Videos <Youtube className="ml-2" strokeWidth={1.6}/></Link>
-            <Link to='/roadmaps' className={buttonVariants({variant: 'secondary', size: 'lg', className: "flex-1"})}>Browse Roadmaps <GanttChartSquare  className="ml-2" strokeWidth={1.6}/></Link>
+            <Link to='/yt-videos' className={buttonVariants({size: 'lg'})}>Browse YouTube Videos <Youtube className="ml-2" strokeWidth={1.6}/></Link>
+            <Link to='/roadmaps' className={buttonVariants({variant: 'secondary', size: 'lg'})}>Browse Roadmaps <GanttChartSquare  className="ml-2" strokeWidth={1.6}/></Link>
          </div>
          </section>
       
          <section className="pt-5 pb-20 max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6">
             <Link to='/yt-videos'>
-               <Card className='cursor-pointer max-sm:py-1'>
-                  <CardHeader className="max-sm:p-3 max-sm:pb-1">
+               <Card className='cursor-pointer max-sm:py-3'>
+                  <CardHeader className="max-sm:px-4 max-sm:py-2">
                      <CardTitle className='flex items-center gap-2 max-sm:text-lg'>YouTube Videos <Youtube strokeWidth={1.6}/></CardTitle>
                   </CardHeader>
-                  <CardContent className="max-sm:p-3 max-sm:pt-1">
+                  <CardContent className="max-sm:px-4 max-sm:pb-2 max-sm:pt-1">
                      <p className="max-sm:text-sm">A list of links to trusted Youtube Videos.</p>
                   </CardContent>
                </Card>
             </Link>
             <Link to='/roadmaps'>
-               <Card className='cursor-pointer max-sm:py-1'>
-                  <CardHeader className="max-sm:p-3 max-sm:pb-1">
+               <Card className='cursor-pointer max-sm:py-3'>
+                  <CardHeader className="max-sm:px-4 max-sm:py-2">
                      <CardTitle className='flex items-center gap-2 max-sm:text-lg'>Roadmaps <GanttChartSquare strokeWidth={1.6}/></CardTitle>
                   </CardHeader>
-                  <CardContent className="max-sm:p-3 max-sm:pt-1">
+                  <CardContent className="max-sm:px-4 max-sm:pb-2 max-sm:pt-1">
                      <p className="max-sm:text-sm">A list of roadmaps to guide your learning.</p>
                   </CardContent>
                </Card>
@@ -53,11 +53,11 @@ const Home = () => {
                </Card>
             </Link> */}
             <a href="https://medium.com/tag/web-development" target="_blank">
-               <Card className='cursor-pointer max-sm:py-1'>
-                  <CardHeader className="max-sm:p-3 max-sm:pb-1">
+               <Card className='cursor-pointer max-sm:py-3'>
+                  <CardHeader className="max-sm:px-4 max-sm:py-2">
                      <CardTitle className='flex items-center gap-2 max-sm:text-lg'>Blog Posts <LibrarySquare strokeWidth={1.6}/></CardTitle>
                   </CardHeader>
-                  <CardContent className="max-sm:p-3 max-sm:pt-1">
+                  <CardContent className="max-sm:px-4 max-sm:pb-2 max-sm:pt-1">
                      <p className="max-sm:text-sm">Blog Posts to read about web development trends.</p>
                   </CardContent>
                </Card>

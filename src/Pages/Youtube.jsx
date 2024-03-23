@@ -5,6 +5,7 @@ import { Badge } from '@/components/ui/badge'
 import useFetch from "@/hooks/use-fetch"
 import { useToast } from '@/components/ui/use-toast'
 import { sortByCreatedAt } from '@/lib/utils'
+import ReactPlayer from 'react-player/youtube'
 
 
 const Youtube = () => {
@@ -19,8 +20,7 @@ const Youtube = () => {
    const toastNotification = () => {
       toast({
          title: "Yay, you clicked a button!!",
-         description: "The buttons don't work yet, the site is still in development. 😜",
-      })
+         description: "The buttons don't work yet, the site is still in development. 😜",      })
    }
    
   return (
@@ -44,11 +44,16 @@ const Youtube = () => {
                <Button onClick={toastNotification} size='sm' variant='outline'>AI</Button>
             </div>
             
+            {loading && <p className="text-center mt-6">Loading ...</p>}
+            {error && <p className="text-center mt-6 text-red-400">{error.message}</p>}
+            
             <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 pt-10'>
                {
                   data && data.map((dt, i) => (
                      <Card className='p-3 duration-300 rounded-lg'>
-                        <iframe className='aspect-video w-full rounded-sm mb-3' src={`${dt.link}?allow=accelerometer;clipboard-write;encrypted-media;gyroscope;picture-in-picture`} frameBorder="0"></iframe>
+                        <div className='w-full aspect-video rounded-sm overflow-hidden'>
+                           <ReactPlayer url={dt.link} width='100%' height='100%'/>
+                        </div>
                         <CardTitle className='text-lg my-2 line-clamp-2'>
                            <a href={dt.link} target='_blank'>Learn web development as an absolute beginner</a>
                         </CardTitle>
