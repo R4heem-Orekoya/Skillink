@@ -55,7 +55,7 @@ const Youtube = () => {
                            <ReactPlayer url={dt.link} width='100%' height='100%'/>
                         </div>
                         <CardTitle className='text-lg my-2 line-clamp-2'>
-                           <a href={dt.link} target='_blank'>Learn web development as an absolute beginner</a>
+                           <a href={dt.link} target='_blank'>{dt.title}</a>
                         </CardTitle>
                         <CardDescription className='line-clamp-2'>
                            {dt.excerpt}
